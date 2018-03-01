@@ -1,0 +1,45 @@
+#parse("layout/head.vm")
+<section class="panel  panel-layout">
+    <header class="panel-heading">
+        container 列表信息
+    </header>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+
+            <tr>
+                <td>序号</td>
+                <td>nodeId</td>
+                <td>totalMemoryNeededMB</td>
+                <td>totalVCoresNeeded</td>
+                <td>state</td>
+                <td>diagnostics</td>
+                <td>containerLogsLink</td>
+                <td>user</td>
+                <td>id</td>
+                <td>exitCode</td>
+                <td>executionType</td>
+                <td>操作</td>
+            </tr>
+                #foreach($containerInfo in $containerInfoQueue)
+                    <tr>
+                        <td>$foreach.count</td>
+                        <td>$containerInfo.nodeId</td>
+                        <td>$containerInfo.totalMemoryNeededMB</td>
+                        <td>$containerInfo.totalVCoresNeeded</td>
+                        <td>$containerInfo.state</td>
+                        <td>$containerInfo.diagnostics</td>
+                        <td>$containerInfo.containerLogsLink</td>
+                        <td>$containerInfo.user</td>
+                        <td>$containerInfo.id</td>
+                        <td>$containerInfo.exitCode</td>
+                        <td>$containerInfo.executionType</td>
+                        <td>停止</td>
+                    </tr>
+                #end
+            </thead>
+            <tbody>
+        </table>
+    </div>
+</section>
+#parse("layout/foot.vm")

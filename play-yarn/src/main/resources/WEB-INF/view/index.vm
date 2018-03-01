@@ -1,0 +1,10 @@
+#parse("layout/head.vm")
+<section class="panel panel-layout">
+    <header class="panel-heading">
+        首页
+    </header>
+    <div class="panel-body">
+        首页内容
+    </div>
+</section>
+#parse("layout/foot.vm")

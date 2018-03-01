@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<head lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="/assets/images/favicon.jpg" type="image/jpg">
+    <title>
+        #if ($resultMap.title)
+            $resultMap.title
+        #else
+            无标题
+        #end
+    </title>
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style-responsive.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css">
+    <link href="/assets/js/bootstrap-datetimepicker/css/datetimepicker.css" rel="stylesheet">
+    <link href="/assets/js/select2/css/select2.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body class="sticky-header left-side-collapsed">
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="/index"><img src="/assets/images/logo.png" alt=""></a>
+        </div>
+        <div class="logo-icon text-center">
+            <a href="/index"><img src="/assets/images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+        <div class="left-side-inner">
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                #if ($resultMap.navigation_url == "/index.shtml")
+                    <li class="menu-list nav-active active"><a href="/index.shtml"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                #else
+                    <li><a href="/index.shtml"><i class="fa fa-home"></i> <span>首页</span></a></li>
+                #end
+
+                <li class="menu-list nav-active"><a href=""><i class="fa fa-laptop"></i> <span>Yarn中心</span></a>
+##                <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>Yarn中心</span></a>
+                    <ul class="sub-menu-list">
+                        #if ($resultMap.navigation_url == "/container/index.shtml")
+                            <li class="active"><a href="#">Container信息</a></li>
+                        #else
+                            <li><a href="/container/index.shtml">Container信息</a></li>
+                        #end
+                    </ul>
+                </li>
+            </ul>
+            <!--sidebar nav end-->
+        </div>
+    </div>
+    <!-- left side end-->
+    <!-- main content start-->
+    <div class="main-content" style="">
+        <!-- header section start-->
+        <div class="header-section">
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+            <!--notification menu start -->
+            <div class="menu-right">
+            </div>
+            <!--notification menu end -->
+        </div>
+        <!-- header section end-->
+        <div class="page-heading">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="$resultMap.navigation_url"> $resultMap.navigation_title </a>
+                </li>
+                #if ($resultMap.navigation_sub_title)
+                    <li class="active">
+                        $resultMap.navigation_sub_title
+                    </li>
+                #end
+            </ul>
+        </div>
+        <!-- page heading end-->
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+
